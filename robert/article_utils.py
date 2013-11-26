@@ -19,6 +19,7 @@ def get_articles():
     article_dir = path.join(path.dirname(__file__), '..', 'articles')
     for article_file in listdir(article_dir):
         article_path = path.relpath(path.join(article_dir, article_file))
+        print "Article path", article_path
         article = {}
         article['title'] = article_file.rstrip('.md')
         article['date_added'] = _get_date_added(article_path)
@@ -31,7 +32,8 @@ def get_articles():
 
 
 def _get_first_commit(article_path):
-    raw_output = subprocess.check_output('git rev-list HEAD "%s"' % article_path)
+    cmd = 'git rev-list HEAD "%s"' % article_path
+    raw_output = subprocess.check_output(cmd, shell=True)
     all_commits = raw_output.strip().split('\n')
     first_commit = all_commits[-1]
     return first_commit
@@ -39,12 +41,14 @@ def _get_first_commit(article_path):
 
 def _get_date_added(article_path):
     first_commit = _get_first_commit(article_path)
-    date_added = subprocess.check_output('git show -s --format="%%ci" %s --' % first_commit)
+    cmd = 'git show -s --format="%%ci" %s --' % first_commit
+    date_added = subprocess.check_output(cmd, shell=True)
     nicely_formatted_date_added = ' '.join(date_added.split()[:2])
     return nicely_formatted_date_added
 
 
 def _get_author(article_path):
     first_commit = _get_first_commit(article_path)
-    raw_output = subprocess.check_output('git show -s --format="%%aN" "%s" --' % first_commit)
+    cmd = 'git show -s --format="%%aN" "%s" --' % first_commit
+    raw_output = subprocess.check_output(cmd, shell=True)
     return raw_output.strip()
