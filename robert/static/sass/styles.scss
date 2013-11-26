@@ -1,0 +1,50 @@
+$primary-color: #900;
+
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  line-height: 1.8em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5
+h6 {
+  color: $primary-color;
+  font-family: 'Droid Serif', serif;
+  font-weight: bold;
+}
+
+p {
+  margin-top: 1.5em;
+}
+
+.container {
+  height: 100%;
+}
+
+.description {
+  font-size: .9em;
+  min-height: 100%;
+  display: table;
+  line-height: 1.5em;
+
+  .description-inner-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  ul {
+    list-style: none;
+  }
+}
+
+@media (max-width:768px) {
+
+  html {
+    height: auto;
+  }
+}

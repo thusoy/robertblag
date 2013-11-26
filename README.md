@@ -1,4 +1,4 @@
-robertblag
-==========
+Robert
+======
 
 The blog for Robert, our volleyball playing mindstorms robot.

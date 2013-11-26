@@ -11,12 +11,14 @@ build
 eggs
 parts
 bin
+node_modules
 var
 sdist
 develop-eggs
 .installed.cfg
 lib
 lib64
+venv
 __pycache__
 
 # Installer logs
@@ -34,3 +36,9 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# temp stuff
+.sass-cache
+
+# built stuff
+robert/static/css
