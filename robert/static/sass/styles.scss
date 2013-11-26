@@ -47,4 +47,8 @@ p {
   html {
     height: auto;
   }
+
+  .description {
+    border-bottom: 1px solid $primary-color;
+  }
 }
