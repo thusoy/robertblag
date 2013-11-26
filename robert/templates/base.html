@@ -22,8 +22,9 @@
 
         <div class="description col-sm-3">
             <div class="description-inner-wrapper">
+                <h2>{ meta }</h2>
                 <p>
-                    Shotguns and terminators out of stock and budget, three students from 
+                    Shotguns and terminators out of stock and budget, three students from
                     <a href="http://www.eurecom.fr/">Eurecom</a> try to stay ahead of the game in the war against the machines
                     by building their own killer robots. With lego.
                 </p>
@@ -37,7 +38,9 @@
         </div>
 
         <div class="col-sm-9">
-            {{ article }}
+            {% for article in articles %}
+                {{ article.content }}
+            {% endfor %}
         </div>
     </div>
 
