@@ -9,7 +9,7 @@ from os import path
 
 app = Flask(__name__)
 
-config_path = path.join(path.dirname(__file__), 'config.py')
+config_path = path.abspath(path.join(path.dirname(__file__), 'config.py'))
 app.config.from_pyfile(config_path)
 
 
