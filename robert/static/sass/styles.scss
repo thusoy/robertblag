@@ -1,11 +1,13 @@
 $primary-color: #900;
+$textColor: #222;
 
 html, body {
   height: 100%;
   font-family: 'Open Sans', sans-serif;
   background-color: #eed;
   font-size: 19px;
-  line-height: 1.8em;
+  line-height: 1.65em;
+  color: $textColor;
 }
 
 h1,
@@ -46,6 +48,7 @@ p {
 .byline {
   font-style: italic;
   font-size: 0.9em;
+  color: lighten($textColor, 30%);
 }
 
 @media (max-width:768px) {
