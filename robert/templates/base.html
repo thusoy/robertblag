@@ -41,6 +41,10 @@
         <div class="col-sm-9">
             {% for article in articles %}
                 {{ article.content }}
+
+                <span class="byline">
+                    {{ article.author }}, {{ article.date_added }}
+                </span>
             {% endfor %}
         </div>
     </div>
