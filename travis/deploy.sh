@@ -11,6 +11,9 @@ deploy_branch=production
 default_username=deploy.sh
 default_email=
 
+# Save the .travis.yml so that we can add it to the new branch
+cp .travis.yml /tmp/
+
 #repository to deploy to. must be readable and writable.
 repo=https://$GITHUB_TOKEN@github.com/thusoy/robertblag.git
 
@@ -62,10 +65,14 @@ enable_expanded_output
 #make deploy_branch the current branch
 git symbolic-ref HEAD refs/heads/$deploy_branch
 
+# Add in the travis.yml
+cp /tmp/.travis.yml "$deploy_directory"
+
 #put the previously committed contents of deploy_branch branch into the index
 git --work-tree "$deploy_directory" reset --mixed --quiet
 
 git --work-tree "$deploy_directory" add --all
+
 
 set +o errexit
 diff=$(git --work-tree "$deploy_directory" diff --exit-code --quiet HEAD)$?
