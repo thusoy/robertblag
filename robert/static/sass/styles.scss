@@ -1,63 +1,59 @@
-$primary-color: #900;
-$textColor: #222;
+// ====================================
+// Bootstrap stuff to include
+// ====================================
 
-html, body {
-  height: 100%;
-  font-family: 'Open Sans', sans-serif;
-  background-color: #eed;
-  font-size: 19px;
-  line-height: 1.65em;
-  color: $textColor;
-}
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
 
-h1,
-h2,
-h3,
-h4,
-h5
-h6 {
-  color: $primary-color;
-  font-family: 'Droid Serif', serif;
-  font-weight: bold;
-}
+// Reset
+@import "bootstrap/normalize";
+@import "bootstrap/print";
 
-p {
-  margin-top: 1.5em;
-}
+// Core CSS
+@import "bootstrap/scaffolding";
+//@import "bootstrap/type";
+//@import "bootstrap/code";
+@import "bootstrap/grid";
+//@import "bootstrap/tables";
+//@import "bootstrap/forms";
+//@import "bootstrap/buttons";
 
-.container {
-  height: 100%;
-}
+// Components
+//@import "bootstrap/component-animations";
+//@import "bootstrap/glyphicons";
+//@import "bootstrap/dropdowns";
+//@import "bootstrap/button-groups";
+//@import "bootstrap/input-groups";
+//@import "bootstrap/navs";
+//@import "bootstrap/navbar";
+//@import "bootstrap/breadcrumbs";
+//@import "bootstrap/pagination";
+//@import "bootstrap/pager";
+//@import "bootstrap/labels";
+//@import "bootstrap/badges";
+//@import "bootstrap/jumbotron";
+//@import "bootstrap/thumbnails";
+//@import "bootstrap/alerts";
+//@import "bootstrap/progress-bars";
+//@import "bootstrap/media";
+//@import "bootstrap/list-group";
+//@import "bootstrap/panels";
+//@import "bootstrap/wells";
+//@import "bootstrap/close";
 
-.description {
-  font-size: .9em;
-  min-height: 100%;
-  display: table;
-  line-height: 1.5em;
+// Components w/ JavaScript
+//@import "bootstrap/modals";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popovers";
+//@import "bootstrap/carousel";
 
-  .description-inner-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-  }
+// Utility classes
+//@import "bootstrap/utilities";
+//@import "bootstrap/responsive-utilities";
 
-  ul {
-    list-style: none;
-  }
-}
+// ====================================
+// Robert stuff
+// ====================================
 
-.byline {
-  font-style: italic;
-  font-size: 0.9em;
-  color: lighten($textColor, 30%);
-}
-
-@media (max-width:768px) {
-
-  html {
-    height: auto;
-  }
-
-  .description {
-    border-bottom: 1px solid $primary-color;
-  }
-}
+@import "base";

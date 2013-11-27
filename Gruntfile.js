@@ -6,8 +6,17 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
 
+    bower: {
+      install: {
+        options: {
+          targetDir: 'bower_components',
+        }
+      }
+    },
+
     clean: {
       dist: [
+        '.tmp',
         'dist',
         'robert/**/*.pyc',
       ],
@@ -19,7 +28,7 @@ module.exports = function(grunt) {
     compass: {
       dist: {
         options: {
-          sassDir: 'robert/static/sass/',
+          sassDir: '.tmp/static/sass/',
           cssDir: 'robert/static/css/',
           outputStyle: 'compressed',
         }
@@ -32,6 +41,25 @@ module.exports = function(grunt) {
           logConcurrentOutput: true,
         },
         tasks: ['watch', 'shell:devserver']
+      }
+    },
+
+    copy: {
+      bootstrap: {
+        files: [{
+          expand: true,
+          cwd: 'bower_components/sass-bootstrap/lib',
+          src: ['_*'],
+          dest: '.tmp/static/sass/bootstrap',
+        }]
+      },
+      robertSass: {
+        files: [{
+          expand: true,
+          cwd: 'robert/static/sass',
+          src: ['**'],
+          dest: '.tmp/static/sass',
+        }]
       }
     },
 
@@ -78,6 +106,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'copy',
     'compass',
     'shell:freeze',
     'clean:postbuild',
