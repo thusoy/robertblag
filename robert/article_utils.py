@@ -19,7 +19,6 @@ def get_articles():
     article_dir = path.join(path.dirname(__file__), '..', 'articles')
     for article_file in listdir(article_dir):
         article_path = path.relpath(path.join(article_dir, article_file))
-        print "Article path", article_path
         article = {}
         article['title'] = article_file.rstrip('.md')
         article['date_added'] = _get_date_added(article_path)
@@ -51,4 +50,6 @@ def _get_author(article_path):
     first_commit = _get_first_commit(article_path)
     cmd = 'git show -s --format="%%aN" "%s" --' % first_commit
     raw_output = subprocess.check_output(cmd, shell=True)
-    return raw_output.strip()
+    just_author = raw_output.strip()
+    author_encoded = unicode(just_author, encoding='utf-8')
+    return author_encoded
