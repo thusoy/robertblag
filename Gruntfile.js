@@ -10,7 +10,10 @@ module.exports = function(grunt) {
       dist: [
         'dist',
         'robert/**/*.pyc',
-      ]
+      ],
+      postbuild: [
+        'dist/static/sass',
+      ],
     },
 
     compass: {
@@ -74,8 +77,9 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'clean',
+    'clean:dist',
     'compass',
     'shell:freeze',
+    'clean:postbuild',
   ]);
 };
