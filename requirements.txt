@@ -1,3 +1,4 @@
 flask
 frozen-flask
 markdown
+pillow

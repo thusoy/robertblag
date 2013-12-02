@@ -22,6 +22,7 @@ module.exports = function(grunt) {
       ],
       postbuild: [
         'dist/static/sass',
+        'dist/static/raw_img',
       ],
     },
 
