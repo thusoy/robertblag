@@ -14,6 +14,8 @@ def get_articles():
         - content
         - author
         - date_added
+
+    Articles are sorted by the time added to the repo.
     """
     articles = []
     article_dir = path.join(path.dirname(__file__), '..', 'articles')
@@ -27,7 +29,7 @@ def get_articles():
             article_md = article_fp.read()
         article['content'] = Markup(markdown.markdown(article_md))
         articles.append(article)
-    return articles
+    return sorted(articles, key=lambda a: a['date_added'], reverse=True)
 
 
 def _get_first_commit(article_path):
