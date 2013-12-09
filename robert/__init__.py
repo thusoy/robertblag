@@ -20,4 +20,10 @@ def frontpage():
         'articles': articles,
         'debug': app.config.get('DEBUG', False),
     }
-    return render_template('base.html', **context)
+    return render_template('home.html', **context)
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html', title="Robert :: About")
+
