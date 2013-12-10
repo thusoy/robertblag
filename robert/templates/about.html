@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>About</h1>
+
+    <a href="/">&larr; Back to main</a>
+
+    <p>
+        The project is a semester assignment in an OS class, with the goal of building a robot capable of playing a hybrid game of tennis/volleyball/slaughterhouse, on this field:
+    </p>
+
+    {# hardcoded URL since the target doesn't exist yet, and 404s break the freeze routine #}
+    <img src="/static/img/battlefield.jpg">
+
+    <p>
+        The details of the game can be read <a href="http://soc.eurecom.fr/OS/projects_fall2013.html">here,</a> but the tl;dr version is as follows:
+    </p>
+
+    <ul>
+        <li>The robot with the highest score at the of the round wins.</li>
+        <li>Rounds last for 4 minutes</li>
+        <li>You score 2 points throwing a ball over the net without it bouncing out on the other side</li>
+        <li>You lose 1 point every time you touch the net</li>
+        <li>The robot must fit within a 40x40cm square at the beginning of a round, but may grow or deploy parts after the round has started</li>
+        <li>The robot must be completely autonomous</li>
+    </ul>
+
+    <p>
+        There will be a final tournament sometime in February, in two parts: A 1vs1 and a 2vs2 part (!).
+    </p>
+
+    <a href="/">&larr; Back to main</a>
+{% endblock %}
