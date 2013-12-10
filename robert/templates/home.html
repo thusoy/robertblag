@@ -6,6 +6,7 @@
 
         <span class="byline">
             {{ article.author }}, {{ article.date_added }}
+            <span class="permalink"><a href="{{ url_for('show_blogpost', title=slugify(article.title)) }}">Permalink</a></span>
         </span>
     {% endfor %}
 {% endblock %}
