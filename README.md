@@ -1,4 +1,4 @@
-Robert
+Robert [![Build Status](https://travis-ci.org/thusoy/robertblag.png?branch=master)](https://travis-ci.org/thusoy/robertblag)
 ======
 
 The blog for Robert, our volleyball playing mindstorms robot.
