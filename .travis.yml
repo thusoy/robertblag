@@ -21,9 +21,6 @@ install:
   - npm install -g grunt-cli
   - npm install
 
-  # Get dependencies
-  - grunt bower
-
 script:
   - grunt build
 
