@@ -5,8 +5,11 @@
 from flask import Markup
 from os import path, listdir
 import markdown
+import re
 import subprocess
 
+REPO_ROOT = path.join(path.dirname(__file__), '..')
+ARTICLE_FILE_PATTERN = re.compile(r'.*\.md$')
 
 def get_articles():
     """ Fetch a list of article dicts with the following properties:
@@ -20,6 +23,8 @@ def get_articles():
     articles = []
     article_dir = path.join(path.dirname(__file__), '..', 'articles')
     for article_file in listdir(article_dir):
+        if not ARTICLE_FILE_PATTERN.match(article_file):
+            continue
         article_path = path.relpath(path.join(article_dir, article_file))
         article = {}
         article['title'] = article_file.rstrip('.md')
@@ -34,7 +39,7 @@ def get_articles():
 
 def _get_first_commit(article_path):
     cmd = 'git rev-list HEAD "%s"' % article_path
-    raw_output = subprocess.check_output(cmd, shell=True)
+    raw_output = subprocess.check_output(cmd, shell=True, cwd=REPO_ROOT)
     all_commits = raw_output.strip().split('\n')
     first_commit = all_commits[-1]
     return first_commit
@@ -43,7 +48,7 @@ def _get_first_commit(article_path):
 def _get_date_added(article_path):
     first_commit = _get_first_commit(article_path)
     cmd = 'git show -s --format="%%ci" %s --' % first_commit
-    date_added = subprocess.check_output(cmd, shell=True)
+    date_added = subprocess.check_output(cmd, shell=True, cwd=REPO_ROOT)
     nicely_formatted_date_added = ' '.join(date_added.split()[:2])
     return nicely_formatted_date_added
 
@@ -51,7 +56,7 @@ def _get_date_added(article_path):
 def _get_author(article_path):
     first_commit = _get_first_commit(article_path)
     cmd = 'git show -s --format="%%aN" "%s" --' % first_commit
-    raw_output = subprocess.check_output(cmd, shell=True)
+    raw_output = subprocess.check_output(cmd, shell=True, cwd=REPO_ROOT)
     just_author = raw_output.strip()
     author_encoded = unicode(just_author, encoding='utf-8')
     return author_encoded
