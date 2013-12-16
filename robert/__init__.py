@@ -7,7 +7,6 @@ from .article_utils import get_articles
 from flask import Flask, render_template, abort, request
 from werkzeug.contrib.atom import AtomFeed
 
-from datetime import datetime
 from os import path
 from urlparse import urljoin
 
@@ -52,8 +51,8 @@ def feed():
                  content_type='html',
                  author=article['author'],
                  url=make_external(slugify(article['title'])),
-                 updated=datetime.strptime(article['date_added'], '%Y-%m-%d %H:%M:%S'),
-                 published=datetime.strptime(article['date_added'], '%Y-%m-%d %H:%M:%S'))
+                 updated=article['date_added'],
+                 published=article['date_added'])
     return feed.get_response()
 
 

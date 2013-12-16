@@ -4,6 +4,7 @@
 
 from flask import Markup
 from os import path, listdir
+from datetime import datetime
 import markdown
 import re
 import subprocess
@@ -28,7 +29,7 @@ def get_articles():
         article_path = path.relpath(path.join(article_dir, article_file))
         article = {}
         article['title'] = article_file.rstrip('.md')
-        article['date_added'] = _get_date_added(article_path)
+        article['date_added'] = _get_datetime_added(article_path)
         article['author'] = _get_author(article_path)
         with open(article_path) as article_fp:
             article_md = article_fp.read()
@@ -45,12 +46,12 @@ def _get_first_commit(article_path):
     return first_commit
 
 
-def _get_date_added(article_path):
+def _get_datetime_added(article_path):
     first_commit = _get_first_commit(article_path)
-    cmd = 'git show -s --format="%%ci" %s --' % first_commit
-    date_added = subprocess.check_output(cmd, shell=True, cwd=REPO_ROOT)
-    nicely_formatted_date_added = ' '.join(date_added.split()[:2])
-    return nicely_formatted_date_added
+    cmd = 'git show -s --format="%%ct" %s --' % first_commit
+    timestamp_added = subprocess.check_output(cmd, shell=True, cwd=REPO_ROOT)
+    datetime_added = datetime.fromtimestamp(float(timestamp_added))
+    return datetime_added
 
 
 def _get_author(article_path):
