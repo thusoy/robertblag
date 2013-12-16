@@ -2,15 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Updates from Robert</title>
   <id>http://localhost/recent.atom</id>
-  <updated>2013-12-16T16:25:50Z</updated>
+  <updated>2013-12-13T12:15:44Z</updated>
   <link href="http://localhost/" />
   <link href="http://localhost/recent.atom" rel="self" />
   <generator>Werkzeug</generator>
   <entry xml:base="http://localhost/recent.atom">
+    <title type="text">Here comes the Hotstepper</title>
+    <id>http://localhost/here-comes-the-hotstepper</id>
+    <updated>2013-12-13T12:15:44Z</updated>
+    <published>2013-12-13T12:15:44Z</published>
+    <link href="http://localhost/here-comes-the-hotstepper" />
+    <author>
+      <name>Tarjei Husøy</name>
+    </author>
+    <content type="html">&lt;p&gt;This almost resembles intelligence. Scary stuff:&lt;/p&gt;
+&lt;div class=&quot;video-container&quot;&gt;
+    &lt;iframe src=&quot;//player.vimeo.com/video/81998207&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry xml:base="http://localhost/recent.atom">
     <title type="text">Anal expulsiveness</title>
     <id>http://localhost/anal-expulsiveness</id>
-    <updated>2013-12-16T16:25:50Z</updated>
-    <published>2013-12-16T16:25:50Z</published>
+    <updated>2013-12-13T11:49:53Z</updated>
+    <published>2013-12-13T11:49:53Z</published>
     <link href="http://localhost/anal-expulsiveness" />
     <author>
       <name>Tarjei Husøy</name>
@@ -23,24 +37,10 @@
 &lt;p&gt;It's far from perfect though, the NXT will still lose all bluetooth communication quite haphazardly, and can only recover through a reboot. But we now have more uptime than not, a great improvement from the four hours we spent getting to this point, where connections were dropping randomly and the NXT device seemed to respond as predictably to messages as cornstarch do to the latest Kanye single. With this rolling, we managed to teach Bob collision detection and subsequent recovery, and get a rough metric of distance to nearest wall. Videos might or might not follow shortly.&lt;/p&gt;</content>
   </entry>
   <entry xml:base="http://localhost/recent.atom">
-    <title type="text">Here comes the Hotstepper</title>
-    <id>http://localhost/here-comes-the-hotstepper</id>
-    <updated>2013-12-16T16:25:50Z</updated>
-    <published>2013-12-16T16:25:50Z</published>
-    <link href="http://localhost/here-comes-the-hotstepper" />
-    <author>
-      <name>Tarjei Husøy</name>
-    </author>
-    <content type="html">&lt;p&gt;This almost resembles intelligence. Scary stuff:&lt;/p&gt;
-&lt;div class=&quot;video-container&quot;&gt;
-    &lt;iframe src=&quot;//player.vimeo.com/video/81998207&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry xml:base="http://localhost/recent.atom">
     <title type="text">What I want for Christmas</title>
     <id>http://localhost/what-i-want-for-christmas</id>
-    <updated>2013-12-02T22:52:07Z</updated>
-    <published>2013-12-02T22:52:07Z</published>
+    <updated>2013-12-02T21:52:07Z</updated>
+    <published>2013-12-02T21:52:07Z</published>
     <link href="http://localhost/what-i-want-for-christmas" />
     <author>
       <name>Kjell Braden</name>
@@ -72,8 +72,8 @@ Robert Paulson
   <entry xml:base="http://localhost/recent.atom">
     <title type="text">By any other name</title>
     <id>http://localhost/by-any-other-name</id>
-    <updated>2013-12-02T21:34:27Z</updated>
-    <published>2013-12-02T21:34:27Z</published>
+    <updated>2013-12-02T20:22:21Z</updated>
+    <published>2013-12-02T20:22:21Z</published>
     <link href="http://localhost/by-any-other-name" />
     <author>
       <name>Tarjei Husøy</name>
@@ -86,8 +86,8 @@ Robert Paulson
   <entry xml:base="http://localhost/recent.atom">
     <title type="text">His name is Robert Paulson</title>
     <id>http://localhost/his-name-is-robert-paulson</id>
-    <updated>2013-11-26T23:06:27Z</updated>
-    <published>2013-11-26T23:06:27Z</published>
+    <updated>2013-11-26T21:40:26Z</updated>
+    <published>2013-11-26T21:40:26Z</published>
     <link href="http://localhost/his-name-is-robert-paulson" />
     <author>
       <name>Tarjei Husøy</name>
