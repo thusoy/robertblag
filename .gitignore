@@ -41,6 +41,7 @@ nosetests.xml
 # temp stuff
 .sass-cache
 .tmp
+*.swp
 
 # built stuff
 robert/static/css
