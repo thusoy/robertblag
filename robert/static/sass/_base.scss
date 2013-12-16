@@ -72,7 +72,7 @@ img {
 }
 
 .video-container {
-  padding-bottom: 56.5%; /* For 16x9 videos */
+  padding-bottom: (9 / 16) * 100%; /* For 16x9 videos */
   width: 100%;
   position: relative;
 
