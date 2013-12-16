@@ -48,7 +48,7 @@ def _get_first_commit(article_path):
 
 def _get_datetime_added(article_path):
     first_commit = _get_first_commit(article_path)
-    cmd = 'git show -s --format="%%ct" %s --' % first_commit
+    cmd = 'git show -s --pretty="format:%%ct" %s --' % first_commit
     timestamp_added = subprocess.check_output(cmd, shell=True, cwd=REPO_ROOT)
     datetime_added = datetime.fromtimestamp(float(timestamp_added))
     return datetime_added
@@ -56,7 +56,7 @@ def _get_datetime_added(article_path):
 
 def _get_author(article_path):
     first_commit = _get_first_commit(article_path)
-    cmd = 'git show -s --format="%%aN" "%s" --' % first_commit
+    cmd = 'git show -s --pretty="format:%%aN" "%s" --' % first_commit
     raw_output = subprocess.check_output(cmd, shell=True, cwd=REPO_ROOT)
     just_author = raw_output.strip()
     author_encoded = unicode(just_author, encoding='utf-8')
