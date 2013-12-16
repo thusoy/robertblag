@@ -77,6 +77,17 @@ module.exports = function(grunt) {
       }
     },
 
+    cssUrlEmbed: {
+      css: {
+        options: {
+          baseDir: 'robert/static',
+        },
+        files: {
+            '.tmp/static/sass/_fonts.scss': 'robert/static/sass/_fonts.scss',
+        }
+      }
+    },
+
     watch: {
       options: {
         livereload: true,
@@ -108,6 +119,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'copy',
+    'cssUrlEmbed',
     'compass',
     'shell:freeze',
     'clean:postbuild',
