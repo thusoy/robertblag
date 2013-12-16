@@ -1,6 +1,3 @@
-Here comes the Hotstepper
-=========================
-
 This almost resembles intelligence. Scary stuff:
 
 <div class="video-container">
