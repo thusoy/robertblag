@@ -18,6 +18,7 @@ module.exports = function(grunt) {
       dist: [
         '.tmp',
         'dist',
+        'robert/static/css',
         'robert/**/*.pyc',
       ],
       postbuild: [
