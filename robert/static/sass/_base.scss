@@ -10,15 +10,47 @@ html, body {
   color: $textColor;
 }
 
+.banner {
+  height: 40%;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid $primary-color;
+}
+
+.title {
+  position: absolute;
+  top: 15%;
+  font-family: Georgia;
+  color: #fff;
+  text-shadow: 3px 3px #333;
+  width: 100%;
+  text-align: center;
+  font-size: 250%;
+  line-height: 130%;
+}
+
+@mixin header {
+    color: $primary-color;
+    font-family: 'Droid Serif', serif;
+    font-weight: bold;
+}
+
+a,
+a:hover,
+a:click,
+a:visited {
+  h1 {
+    @include header;
+  }
+}
+
 h1,
 h2,
 h3,
 h4,
 h5
 h6 {
-  color: $primary-color;
-  font-family: 'Droid Serif', serif;
-  font-weight: bold;
+   @include header;
 }
 
 p {
@@ -31,9 +63,9 @@ p {
 
 .description {
   font-size: .9em;
-  min-height: 100%;
   display: table;
   line-height: 1.5em;
+  border-bottom: 1px solid $primary-color;
 
   .description-inner-wrapper {
     display: table-cell;
@@ -51,14 +83,11 @@ p {
   color: lighten($textColor, 30%);
 }
 
-@media (max-width:768px) {
-
-  html {
-    height: auto;
-  }
+@media (min-width:768px) {
 
   .description {
-    border-bottom: 1px solid $primary-color;
+    border-bottom: none;
+    min-height: 100%;
   }
 }
 
