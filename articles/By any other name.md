@@ -1,3 +1,5 @@
+The story behind the name.
+
 Yes, I can hear you asking (and feel my team members despair), how can you name a robot Robert?
 
 C'mon, seriously? Robert is an *awesome* name for a robot! But besides the awesomeness, there's actually a story behind it as well. No, I didn't say it was a good one, but I've got your attention anyway, so you'll read it whether you like it or not.
