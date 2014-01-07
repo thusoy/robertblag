@@ -15,7 +15,8 @@
     <author>
       <name>Tarjei Husøy</name>
     </author>
-    <content type="html">&lt;p&gt;This almost resembles intelligence. Scary stuff:&lt;/p&gt;
+    <content type="html">
+&lt;p&gt;This almost resembles intelligence. Scary stuff:&lt;/p&gt;
 &lt;div class=&quot;video-container&quot;&gt;
     &lt;iframe src=&quot;//player.vimeo.com/video/81998207&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;</content>
@@ -29,7 +30,8 @@
     <author>
       <name>Tarjei Husøy</name>
     </author>
-    <content type="html">&lt;p&gt;Our lil' friend went through a quite rebellious stage the last days, but we now seem to have outgrown the worst problems - the toddler has started talking! After a lengthy search through available libraries for communicating with NXT devices over bluetooth, we've finally settled on &lt;code&gt;jaraco.nxt&lt;/code&gt;, as it's the only one we got working within a reasonable time-frame, has the correct abstraction level and happens to be written in python. And as a bonus, available through PyPI, which makes it all so much more pleasant to get started. Documentation is not great, but the source code is succinct enough to be easily read, and it ships with a couple of working examples to get you started.&lt;/p&gt;
+    <content type="html">
+&lt;p&gt;Our lil' friend went through a quite rebellious stage the last days, but we now seem to have outgrown the worst problems - the toddler has started talking! After a lengthy search through available libraries for communicating with NXT devices over bluetooth, we've finally settled on &lt;code&gt;jaraco.nxt&lt;/code&gt;, as it's the only one we got working within a reasonable time-frame, has the correct abstraction level and happens to be written in python. And as a bonus, available through PyPI, which makes it all so much more pleasant to get started. Documentation is not great, but the source code is succinct enough to be easily read, and it ships with a couple of working examples to get you started.&lt;/p&gt;
 &lt;p&gt;Why do we want the bluetooth communication anyway? Purely for debugging purposes. Lil' Bobby is expected to navigate around the playing field on his own, being aware of his own approximate coordinates on the field so that he can avoid colliding with the net, and to be able to throw stuff over the net when that time comes. Implementing this logic would not be too hard in a pure software emulation, but implementing this on a hardware device in, you know, &lt;em&gt;real life&lt;/em&gt;, comes the brutality of working with cheap sensors and inaccurate motors. So we use the bluetooth connection purely for debugging, writing out sensor data and debug statements so that we can monitor it during execution.&lt;/p&gt;
 &lt;p&gt;The logging code we use for monitoring looks like this:&lt;/p&gt;
 &lt;script src=&quot;https://gist.github.com/thusoy/7796033.js&quot;&gt;&lt;/script&gt;
@@ -45,7 +47,8 @@
     <author>
       <name>Kjell Braden</name>
     </author>
-    <content type="html">&lt;p&gt;As you saw in previous posts, Little Bobby has already materialized. All excited about his first Christmas season, he sent out the following email:&lt;/p&gt;
+    <content type="html">
+&lt;p&gt;As you saw in previous posts, Little Bobby has already materialized. All excited about his first Christmas season, he sent out the following email:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;From: Robert Paulson &amp;lt;bobby13@[redacted]&amp;gt;
 To: Santa Claus &amp;lt;claus@[redacted]&amp;gt;
 Subject: Wishlist
@@ -78,7 +81,8 @@ Robert Paulson
     <author>
       <name>Tarjei Husøy</name>
     </author>
-    <content type="html">&lt;p&gt;Yes, I can hear you asking (and feel my team members despair), how can you name a robot Robert?&lt;/p&gt;
+    <content type="html">
+&lt;p&gt;Yes, I can hear you asking (and feel my team members despair), how can you name a robot Robert?&lt;/p&gt;
 &lt;p&gt;C'mon, seriously? Robert is an &lt;em&gt;awesome&lt;/em&gt; name for a robot! But besides the awesomeness, there's actually a story behind it as well. No, I didn't say it was a good one, but I've got your attention anyway, so you'll read it whether you like it or not.&lt;/p&gt;
 &lt;p&gt;I actually can't take credit for the name, my chinese roommate &lt;strong&gt;Wuyang&lt;/strong&gt; was the unvoluntary creator. We were discussing potential names for the creature when a freudian slip made the pronounciation of &quot;robot&quot; turn into something that closely resembled &quot;Robert&quot;. And it kinda stuck.&lt;/p&gt;
 &lt;p&gt;Boom, ta-da, &lt;strong&gt;done&lt;/strong&gt;! That's how hard it is. Total energy spent in the process probably in the order of a M&amp;amp;M, and it took us ~45s and a laugh. And it's still far more awesome than &lt;a href=&quot;http://xkcd.com/1011/&quot;&gt;Renesmee&lt;/a&gt;.&lt;/p&gt;</content>
@@ -92,7 +96,8 @@ Robert Paulson
     <author>
       <name>Tarjei Husøy</name>
     </author>
-    <content type="html">&lt;p&gt;We reached what might not be our first, but definitively our most important milestone today; our mean, lean killing machine got his name! I'm pleased to introduce you to &lt;strong&gt;Robert&lt;/strong&gt;:&lt;/p&gt;
+    <content type="html">
+&lt;p&gt;We reached what might not be our first, but definitively our most important milestone today; our mean, lean killing machine got his name! I'm pleased to introduce you to &lt;strong&gt;Robert&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&quot;Robert in early test stage&quot; src=&quot;/static/img/robert1.jpg&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Like his &lt;a href=&quot;http://www.youtube.com/watch?v=GCi_PIz5ekU&quot;&gt;brother in name&lt;/a&gt;, Bob might very well die in the end (or even before that), but in doing so he inspires a revolution.&lt;/p&gt;
 &lt;p&gt;The apocalypse might be closer than you think.&lt;/p&gt;</content>
