@@ -2,13 +2,16 @@
 
 {% block content %}
     {% for article in articles %}
-        <h1>{{ article.title }}</h1>
+        {% set post_url = url_for('show_blogpost', title=slugify(article.title)) %}
+        <a href="{{ post_url }}">
+            <h1>{{ article.title }}</h1>
+        </a>
 
-        {{ article.content }}
+        {{ article.teaser }}
 
         <span class="byline">
             {{ article.author }}, {{ article.date_added }}
-            <span class="permalink"><a href="{{ url_for('show_blogpost', title=slugify(article.title)) }}">Permalink</a></span>
+            <span class="permalink"><a href="{{ post_url }}">Read more &rarr;</a></span>
         </span>
     {% endfor %}
 {% endblock %}

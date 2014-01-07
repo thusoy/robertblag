@@ -1,3 +1,5 @@
+A small to-do list before Christmas holidays.
+
 As you saw in previous posts, Little Bobby has already materialized. All excited about his first Christmas season, he sent out the following email:
 
     From: Robert Paulson <bobby13@[redacted]>

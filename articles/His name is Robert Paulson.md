@@ -1,3 +1,5 @@
+Behold, he's got a name!
+
 We reached what might not be our first, but definitively our most important milestone today; our mean, lean killing machine got his name! I'm pleased to introduce you to **Robert**:
 
 ![Robert in early test stage](/static/img/robert1.jpg)

@@ -33,7 +33,10 @@ def get_articles():
         article['author'] = _get_author(article_path)
         with open(article_path) as article_fp:
             article_md = article_fp.read()
-        article['content'] = Markup(markdown.markdown(article_md))
+        rendered_content = Markup(markdown.markdown(article_md))
+        teaser_breakpoint = rendered_content.index('</p>') + 4
+        article['teaser'] = rendered_content[:teaser_breakpoint]
+        article['content'] = rendered_content[teaser_breakpoint:]
         articles.append(article)
     return sorted(articles, key=lambda a: a['date_added'], reverse=True)
 
