@@ -83,7 +83,7 @@ module.exports = function(grunt) {
           baseDir: 'robert/static',
         },
         files: {
-            '.tmp/static/sass/_fonts.scss': 'robert/static/sass/_fonts.scss',
+          '.tmp/static/sass/_fonts.scss': 'robert/static/sass/_fonts.scss',
         }
       }
     },
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
       },
       sass: {
         files: ['robert/static/sass/*.scss'],
-        tasks: ['compass'],
+        tasks: ['copy', 'compass'],
       },
       templates: {
         files: ['robert/templates/*.html'],
