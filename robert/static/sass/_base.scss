@@ -11,14 +11,14 @@ html, body {
 }
 
 .banner {
-  height: 40%;
+  min-height: 40%;
   background-size: cover;
   background-position: center;
 }
 
 .title {
-  position: absolute;
-  top: 15%;
+  padding-top: 2.5em;
+  margin: 0;
   font-family: Georgia;
   color: #fff;
   text-shadow: 3px 3px #333;
