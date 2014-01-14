@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="His name is Robert Paulson">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Here comes the Hotstepper</title>
+    <title>Polishing the Strategy</title>
     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="alternate" href="/recent.atom" type="application/atom+xml" title="Updates from Robert">
@@ -13,8 +13,8 @@
 <body>
 
     
-    <div class="banner" style="background-image:url('/static/img/bgs/bg07.jpg')">
-        <h1 class="title">Here comes the Hotstepper</h1>
+    <div class="banner" style="background-image:url('/static/img/bgs/bg11.jpg')">
+        <h1 class="title">Polishing the Strategy</h1>
     </div>
 
     <div class="container">
@@ -55,14 +55,37 @@
             
 
     <span class="byline">
-            Tarjei Husøy, 2013-12-13 12:15:44
+            damien72, 2014-01-14 15:30:05
     </span>
 
     
-<p>This almost resembles intelligence. Scary stuff:</p>
-<div class="video-container">
-    <iframe src="//player.vimeo.com/video/81998207" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
+<p>In the <a href="http://bob.thusoy.com/robot-badass-strategy.html">previous article</a> we saw our basic strategy, which hasn't changed a lot throughout the project. Until recently!</p>
+<p>Over the last few days, we tried to optimize the code and changed some aspects in Robert's behaviour:</p>
+<ul>
+<li>
+<p>We now start with full magazine (one ball already on the arm), start our patrol and immediately throw this ball when we reach the net.</p>
+</li>
+<li>
+<p>Some balls are placed close to the net and thanks to our routine having been optimized, those balls are caught and thrown quickly afterwards. 
+This is a pretty huge improvement because the robot used to finish his turn (~19s) before throwing this ball over the net. </p>
+</li>
+<li>
+<p>We plan to optimize also the turning detection, which you will get more information about in a new article.</p>
+</li>
+</ul>
+<p>Basically, our program runs thanks to three main tasks:</p>
+<ul>
+<li>
+<p><em>collect</em>, which uses the color sensor and keeps making the arm rotate until we catch a red or a blue ball (which sets the flag ballLoaded).</p>
+</li>
+<li>
+<p><em>trace</em>, which prevents our robot from running into the net in case we have performed a bad turn. If it's the case, the robot stops and changes direction to go away from the net.</p>
+</li>
+<li>
+<p>our <em>main</em>, which in essence starts with a setup of the unmetioned sensors and applies the strategy we've talked about, making calls to collect and trace at the right time.
+We also use a Bluetooth connection with the NXT in order to get directly information about the robot on a computer. We already showed the code for the server <a href="http://bob.thusoy.com/anal-expulsiveness.html">here</a> abd also added two files for our robot, btio and btlog, that waits for a connection and enables the robot to send messages.</p>
+</li>
+</ul>
 
     <a href="/">&larr; Back to main</a>
 
