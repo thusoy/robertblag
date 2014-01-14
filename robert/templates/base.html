@@ -13,9 +13,8 @@
 <body>
 
     {% set banner_img = article['bg_img'] if article else url_for('static', filename='img/banner.jpg') %}
-    {% set banner_title = article['title'] if article else 'Robert Paulson' %}
     <div class="banner" style="background-image:url('{{ banner_img }}')">
-        <h1 class="title">{{ banner_title }}</h1>
+        <h1 class="title">{{ title }}</h1>
     </div>
 
     <div class="container">

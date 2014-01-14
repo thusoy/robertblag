@@ -21,13 +21,14 @@ def frontpage():
     articles = get_articles()
     context = {
         'articles': articles,
+        'title': 'Robert Paulson',
     }
     return render_template('home.html', **context)
 
 
 @app.route('/about.html')
 def about():
-    return render_template('about.html', title="Robert :: About")
+    return render_template('about.html', title='About')
 
 
 @app.route('/<title>.html')
@@ -36,7 +37,7 @@ def show_blogpost(title):
     titles = {slugify(article['title']): article for article in all_articles}
     article = titles.get(title)
     context = {
-        'titles': article['title'],
+        'title': article['title'],
         'article': article,
         'hide_small_description': True,
     }
