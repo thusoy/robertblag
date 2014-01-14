@@ -59,21 +59,21 @@
     </span>
 
     
-<p>As you may have seen on some photographs of our robot, we have <strong>one big rotating arm</strong> in the middle and two smaller ones on each front side in order to grab the balls.
-Apart from the tracks, we add on top of that <strong>a bunch of sensors</strong> whose roles are to help the robot navigate on the field:</p>
+<p>As you may have seen on some photographs of our robot, we have <strong>one big rotating arm (G)</strong> in the middle and two smaller ones on each front side in order to grab the balls.
+Apart from the tracks(E+F), we add on top of that <strong>a bunch of sensors</strong> whose roles are to help the robot navigate on the field:</p>
 <p><img alt="Robert fully equipped for battle" src="/static/img/architecture.jpg" /></p>
 <ul>
 <li>
-<p>a <em>color sensor</em>, to detect when we have caught a blue or red ball. In that case we want the robot to stop moving the arm, finish his turn and go to the net in order to throw the ball over.</p>
+<p>a <em>color sensor (D)</em>, to detect when we have caught a blue or red ball. In that case we want the robot to stop moving the arm, finish his turn and go to the net in order to throw the ball over.</p>
 </li>
 <li>
-<p>a <em>touch sensor</em>, to detect when we hit a wall.</p>
+<p>a <em>touch sensor (A)</em>, to detect when we hit a wall.</p>
 </li>
 <li>
-<p>an <em>ultrasonic sensor</em>, to detect the net since we are not supposed to touch it (as it is the case for the walls) unless we want to lose points.</p>
+<p>an <em>ultrasonic sensor (C)</em>, to detect the net since we are not supposed to touch it (as it is the case for the walls) unless we want to lose points.</p>
 </li>
 <li>
-<p>a <em>light sensor</em>, to be sure we follow correctly the net without running into it.</p>
+<p>a <em>light sensor (B)</em>, to be sure we follow correctly the net without running into it.</p>
 </li>
 </ul>
 <p>Equipped with that arsenal, we need an effective and not too complex <strong>strategy</strong>. Here is what we agreed on:
