@@ -19,5 +19,5 @@ Basically, our program runs thanks to three main tasks:
 * *trace*, which prevents our robot from running into the net in case we have performed a bad turn. If it's the case, the robot stops and changes direction to go away from the net.
 
 * our *main*, which in essence starts with a setup of the unmetioned sensors and applies the strategy we've talked about, making calls to collect and trace at the right time.
-We also use a Bluetooth connection with the NXT in order to get directly information about the robot on a computer. We already showed the code for the server [here](http://bob.thusoy.com/anal-expulsiveness.html) abd also added two files for our robot, btio and btlog, that waits for a connection and enables the robot to send messages.
+We also use a Bluetooth connection with the NXT in order to get directly information about the robot on a computer. We already showed the code for the server [here](http://bob.thusoy.com/anal-expulsiveness.html) and also added two files for our robot, btio and btlog, that wait for a connection and enable the robot to send messages.
 
