@@ -35,8 +35,13 @@ def show_blogpost(title):
     all_articles = get_articles()
     titles = {slugify(article['title']): article for article in all_articles}
     article = titles.get(title)
+    context = {
+        'titles': article['title'],
+        'article': article,
+        'hide_small_description': True,
+    }
     if article:
-        return render_template('article.html', title=article['title'], article=article)
+        return render_template('article.html', **context)
     else:
         abort(404)
 
