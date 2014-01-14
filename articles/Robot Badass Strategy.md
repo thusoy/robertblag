@@ -3,15 +3,15 @@ We're getting pretty close to the end of the project, so how about a quick summa
 As you may have seen on some photographs of our robot, we have **one big rotating arm** in the middle and two smaller ones on each front side in order to grab the balls.
 Apart from the tracks, we add on top of that **a bunch of sensors** whose roles are to help the robot navigate on the field:
 
-<ul>
-<li>a <i>color sensor</i>, to detect when we have caught a blue or red ball. In that case we want the robot to stop moving the arm, finish his turn and go to the net in order to throw the ball over.</li>
 
-<li>a <i>touch sensor</i>, to detect when we hit a wall.</li>
+* a *color sensor*, to detect when we have caught a blue or red ball. In that case we want the robot to stop moving the arm, finish his turn and go to the net in order to throw the ball over.
 
-<li>an <i>ultrasonic sensor</i>, to detect the net since we are not supposed to touch it (as it is the case for the walls) unless we want to lose points.</li>
+* a *touch sensor*, to detect when we hit a wall.
 
-<li>a <i>light sensor</i>, to be sure we follow correctly the net without running into it.</li>
-</ul>
+* an *ultrasonic sensor*, to detect the net since we are not supposed to touch it (as it is the case for the walls) unless we want to lose points.
+
+* a *light sensor*, to be sure we follow correctly the net without running into it.
+
 
 Equipped with that arsenal, we need an effective and not too complex **strategy**. Here is what we agreed on:
 The robot starts on his landing area and performs some patrols around the field. When a ball is caught, we finish our round in order to face the net, stop and <del>FIRE!</del> throw the ball over. And whatnot...
