@@ -1,18 +1,18 @@
 We're getting pretty close to the end of the project, so how about a quick summary of our <del>neutralizing</del> gaming strategy?
 
-As you may have seen on some photographs of our robot, we have **one big rotating arm** in the middle and two smaller ones on each front side in order to grab the balls.
-Apart from the tracks, we add on top of that **a bunch of sensors** whose roles are to help the robot navigate on the field:
+As you may have seen on some photographs of our robot, we have **one big rotating arm (G)** in the middle and two smaller ones on each front side in order to grab the balls.
+Apart from the tracks(E+F), we add on top of that **a bunch of sensors** whose roles are to help the robot navigate on the field:
 
 ![Robert fully equipped for battle](/static/img/architecture.jpg)
 
 
-* a *color sensor*, to detect when we have caught a blue or red ball. In that case we want the robot to stop moving the arm, finish his turn and go to the net in order to throw the ball over.
+* a *color sensor (D)*, to detect when we have caught a blue or red ball. In that case we want the robot to stop moving the arm, finish his turn and go to the net in order to throw the ball over.
 
-* a *touch sensor*, to detect when we hit a wall.
+* a *touch sensor (A)*, to detect when we hit a wall.
 
-* an *ultrasonic sensor*, to detect the net since we are not supposed to touch it (as it is the case for the walls) unless we want to lose points.
+* an *ultrasonic sensor (C)*, to detect the net since we are not supposed to touch it (as it is the case for the walls) unless we want to lose points.
 
-* a *light sensor*, to be sure we follow correctly the net without running into it.
+* a *light sensor (B)*, to be sure we follow correctly the net without running into it.
 
 
 Equipped with that arsenal, we need an effective and not too complex **strategy**. Here is what we agreed on:
