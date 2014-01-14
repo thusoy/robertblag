@@ -13,7 +13,7 @@
 <body>
 
     
-    <div class="banner" style="background-image:url('/static/img/bgs/bg07.jpg')">
+    <div class="banner" style="background-image:url('/static/img/bgs/bg11.jpg')">
         <h1 class="title">Robot Badass Strategy</h1>
     </div>
 
@@ -60,11 +60,17 @@
 
     
 <p>As you may have seen on some photographs of our robot, we have <strong>one big rotating arm</strong> in the middle and two smaller ones on each front side in order to grab the balls.
-Apart from the tracks, we add on top of that <strong>a bunch of sensors</strong> whose roles are to help the robot navigate on the field:
-- a <i>color sensor</i>, to detect when we have caught a blue or red ball. In that case we want the robot to stop moving the arm, finish his turn and go to the net in order to throw the ball over.
-- a <i>touch sensor</i>, to detect when we hit a wall.
-- an <i>ultrasonic sensor</i>, to detect the net since we are not supposed to touch it (as it is the case for the walls) unless we want to lose points.
-- a <i>light sensor</i>, to be sure we follow correctly the net without running into it.</p>
+Apart from the tracks, we add on top of that <strong>a bunch of sensors</strong> whose roles are to help the robot navigate on the field:</p>
+<ul>
+<li>a <i>color sensor</i>, to detect when we have caught a blue or red ball. In that case we want the robot to stop moving the arm, finish his turn and go to the net in order to throw the ball over.</li>
+
+<li>a <i>touch sensor</i>, to detect when we hit a wall.</li>
+
+<li>an <i>ultrasonic sensor</i>, to detect the net since we are not supposed to touch it (as it is the case for the walls) unless we want to lose points.</li>
+
+<li>a <i>light sensor</i>, to be sure we follow correctly the net without running into it.</li>
+</ul>
+
 <p>Equipped with that arsenal, we need an effective and not too complex <strong>strategy</strong>. Here is what we agreed on:
 The robot starts on his landing area and performs some patrols around the field. When a ball is caught, we finish our round in order to face the net, stop and <del>FIRE!</del> throw the ball over. And whatnot...
 However, problems may occur when we haven't found any ball for a while. In that case, we change the radius of effect and perform smaller or wider squares to be sure we take a bite out of something!</p>
