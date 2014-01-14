@@ -3,6 +3,8 @@ We're getting pretty close to the end of the project, so how about a quick summa
 As you may have seen on some photographs of our robot, we have **one big rotating arm** in the middle and two smaller ones on each front side in order to grab the balls.
 Apart from the tracks, we add on top of that **a bunch of sensors** whose roles are to help the robot navigate on the field:
 
+![Robert fully equipped for battle](/static/img/architecture.jpg)
+
 
 * a *color sensor*, to detect when we have caught a blue or red ball. In that case we want the robot to stop moving the arm, finish his turn and go to the net in order to throw the ball over.
 
