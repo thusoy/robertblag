@@ -16,10 +16,12 @@
       <name>Kjell Braden</name>
     </author>
     <content type="html">
-&lt;p&gt;The time has come. On Monday, Robert 'Bobby' Paulson will compete with five other robots in a game of volleyball. During his last training session we captured a sneak peek:&lt;/p&gt;
+&lt;p&gt;The time has come. On Monday, Robert 'Bobby' Paulson will compete with five other robots in a game of volleyball. During his last training session we captured a sneak peek. When asked to comment about the incident, he told he couldn't decide on whether to throw the red or the blue ball, so he went for both.&lt;/p&gt;
 &lt;div class=&quot;video-container&quot;&gt;
     &lt;iframe src=&quot;//player.vimeo.com/video/84466221&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+
+&lt;p&gt;On a more serious note, you can clearly see &lt;a href=&quot;http://bob.thusoy.com/polishing-the-strategy.html&quot;&gt;optimiziations talked about earlier&lt;/a&gt;: Bob is capable of throwing multiple balls at the net as well as cutting short on our patrol when finding a ball to throw.&lt;/p&gt;</content>
   </entry>
   <entry xml:base="http://localhost/recent.atom">
     <title type="text">Polishing the Strategy</title>
